@@ -55,3 +55,28 @@ LCtrl & Tab:: {
     Send("{Shift Up}{Alt Up}")
     return
 }
+
+
+; [LCtrl+Backspace -> Delete (forward delete, like Mac fn+Backspace)]
+<^Backspace:: {
+    Send("{Delete}")
+    return
+}
+
+; [LCtrl+LShift+4 -> Win+Shift+S (native screenshot/snipping overlay, like Mac Cmd+Shift+4)]
+<^<+4:: {
+    Send("#+{s}")
+    return
+}
+
+; [RCtrl+LShift+V -> Win+V (native clipboard history modal)]
+>^<+v:: {
+    Send("#{v}")
+    return
+}
+
+; [LCtrl+Space -> PowerToys Command Palette (launched directly)]
+<^Space:: {
+    Run("shell:AppsFolder\Microsoft.CommandPalette_8wekyb3d8bbwe!App")
+    return
+}
